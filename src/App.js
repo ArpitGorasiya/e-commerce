@@ -1,27 +1,22 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Header from "./components/Header";
 import Home from "./pages/Home";
+import ProductDetails from "./pages/ProductDetails";
+import Navbar from "./components/Navbar";
+import Cart from "./pages/Cart";
+import Wishlist from "./pages/Wishlist";
 
 function App() {
   return (
     <BrowserRouter>
-      {/* <DataProvider> */}
-      {/* <Header /> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/" element={<ProductDetails />} />
-          <Route path="/" element={<Cart />} /> */}
-        {/* <Route path="/" element={<MainPage />} /> */}
-        {/* <Route path="/cart" element={<AddToCards />} />
-          <Route path="/wishlist" element={<WishList />} />
-          <Route path="/product-details" element={<ProductDetails />} />
-          <Route path="/category/:categoryName" element={<CategoryPage />} />
-          <Route path="/search" element={<SearchResultsPage />} />
-          <Route path="/login" element={<LoginPage />} /> */}
+        <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/wishlist" element={<Wishlist />} />
       </Routes>
-      {/* </DataProvider> */}
     </BrowserRouter>
   );
 }
