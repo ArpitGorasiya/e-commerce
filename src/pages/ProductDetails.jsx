@@ -80,7 +80,7 @@ const ProductDetails = () => {
               </div>
             </div>
 
-            <div className="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8">
+            <div className="mt-6 gap-4 items-center flex">
               {!isInCart(product.id) ? (
                 <button
                   onClick={() => addToCart(product)}
@@ -104,7 +104,7 @@ const ProductDetails = () => {
                     ? removeFromWishlist(product.id)
                     : addToWishlist(product)
                 }
-                className="flex items-center justify-center py-2.5 px-2.5 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100"
+                className="flex items-center justify-center py-2 px-2.5 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100"
               >
                 <CiHeart
                   fillColor="red"
