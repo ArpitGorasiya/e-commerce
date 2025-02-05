@@ -1,31 +1,35 @@
-import { useContext, useEffect, useState } from "react";
-import { RxCross1 } from "react-icons/rx";
-import { NavLink, useNavigate } from "react-router-dom";
+// import { useEffect, useState } from "react";
+import {
+  NavLink,
+  //  useNavigate
+} from "react-router-dom";
 import { useCartWishlist } from "../context/CartContext";
 import cartImage from "../Images/empty-bag.webp";
 import { BsPlus } from "react-icons/bs";
-import { FaArrowRight } from "react-icons/fa";
 import { BiMinus } from "react-icons/bi";
 
 const Cart = () => {
-  const navigate = useNavigate();
-  const { cart, removeFromCart, addToWishlist } = useCartWishlist();
+  // const navigate = useNavigate();
+  const {
+    cart,
+    // removeFromCart, addToWishlist
+  } = useCartWishlist();
 
-  const [totalPrice, setTotalPrice] = useState(0);
+  // const [totalPrice, setTotalPrice] = useState(0);
 
-  useEffect(() => {
-    const price = cart.reduce((acc, item) => acc + item.price * 84, 0);
-    setTotalPrice(price);
-  }, [cart]);
+  // useEffect(() => {
+  //   const price = cart.reduce((acc, item) => acc + item.price * 84, 0);
+  //   setTotalPrice(price);
+  // }, [cart]);
 
-  const handleRemoveFromCart = (productId) => {
-    removeFromCart(productId);
-  };
+  // const handleRemoveFromCart = (productId) => {
+  //   removeFromCart(productId);
+  // };
 
-  const handleMoveToWishlist = (item) => {
-    addToWishlist(item);
-    handleRemoveFromCart(item.id);
-  };
+  // const handleMoveToWishlist = (item) => {
+  //   addToWishlist(item);
+  //   handleRemoveFromCart(item.id);
+  // };
 
   return (
     <>
@@ -43,12 +47,11 @@ const Cart = () => {
                     {cart.map((item) => (
                       <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-6">
                         <div className="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
-                          <a className="shrink-0 md:order-1">
-                            <img
-                              className="h-20 w-20 dark:hidden"
-                              src={item.image}
-                            />
-                          </a>
+                          <img
+                            className="h-20 w-20 dark:hidden"
+                            src={item.image}
+                            alt="img"
+                          />
 
                           <div className="flex items-center justify-between md:order-3 md:justify-end">
                             <div className="flex items-center">
