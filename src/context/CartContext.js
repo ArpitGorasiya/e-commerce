@@ -22,8 +22,9 @@ export const CartWishlistProvider = ({ children }) => {
       return updatedWishlist;
     });
 
+    const productWithQuantity = { ...product, quantity: 1 };
     setCart((prev) => {
-      const updatedCart = [...prev, product];
+      const updatedCart = [...prev, productWithQuantity];
       setToLocalStorage("cart", updatedCart);
       return updatedCart;
     });
@@ -69,6 +70,21 @@ export const CartWishlistProvider = ({ children }) => {
     return wishlist.some((product) => product.id === productId);
   };
 
+  const updateCartQuantity = (productId, quantity) => {
+    setCart((prev) => {
+      const updatedCart = prev.map((item) =>
+        item.id === productId ? { ...item, quantity } : item
+      );
+      setToLocalStorage("cart", updatedCart);
+      return updatedCart;
+    });
+  };
+
+  const clearCart = () => {
+    setCart([]);
+    setToLocalStorage("cart", []);
+  };
+
   return (
     <CartWishlistContext.Provider
       value={{
@@ -80,6 +96,8 @@ export const CartWishlistProvider = ({ children }) => {
         addToWishlist,
         removeFromWishlist,
         isInWishlist,
+        updateCartQuantity,
+        clearCart,
       }}
     >
       {children}

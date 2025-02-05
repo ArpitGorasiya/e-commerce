@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import cartImage from "../Images/empty-bag.webp";
 import { useCartWishlist } from "../context/CartContext";
 
 const Wishlist = () => {
@@ -38,7 +37,7 @@ const Wishlist = () => {
                       onClick={() => addToCart(product)}
                       className="text-black border w-full px-4 py-2 rounded-lg"
                     >
-                      Add to Cart
+                      Move to Cart
                     </button>
                   </div>
                 </div>
@@ -48,9 +47,6 @@ const Wishlist = () => {
         </div>
       ) : (
         <div className="mt-28 text-center">
-          <div className="flex justify-center items-center">
-            <img src={cartImage} alt="cartImage" />
-          </div>
           <h3 className="text-black">Hey, it feels so light!</h3>
           <p>There is nothing in your wishlist. Let's add some items.</p>
           <NavLink to="/" className="mt-8 inline-block">
