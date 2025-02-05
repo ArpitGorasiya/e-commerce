@@ -58,10 +58,7 @@ Optional Features:
 - **React Context API**: For managing the global shopping cart state.
 - **Fake Store API**: For fetching mock product data.
 
-## Running Tests (Optional)
+## Live Preview Link
 
-To run unit tests for components (if you've added them with React Testing Library or Jest), run the following command:
+- https://ecommerce-dashboard-demo.netlify.app/
 
-```bash
-npm test
-```
