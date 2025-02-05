@@ -1,19 +1,19 @@
 import axios from "axios";
+import { Spin } from "antd";
 import { CiHeart } from "react-icons/ci";
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCartWishlist } from "../context/CartContext";
-import { Spin } from "antd";
 
 const Home = () => {
+  const [loading, setLoading] = useState(true);
+  const [sortBy, setSortBy] = useState("none");
   const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [sortBy, setSortBy] = useState("none");
-  const [loading, setLoading] = useState(true);
 
-  const debounceTimeout = useRef(null);
   const navigate = useNavigate();
+  const debounceTimeout = useRef(null);
 
   const {
     addToCart,

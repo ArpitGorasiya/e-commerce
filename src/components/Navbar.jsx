@@ -1,7 +1,7 @@
 import React from "react";
+import { CiHeart } from "react-icons/ci";
 import { NavLink } from "react-router-dom";
 import { BsFillCartPlusFill } from "react-icons/bs";
-import { CiHeart } from "react-icons/ci";
 import { useCartWishlist } from "../context/CartContext";
 
 const Navbar = () => {

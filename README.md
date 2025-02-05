@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# E-commerce Product Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple e-commerce product dashboard where users can browse products, view product details, add products to a shopping cart, and simulate the checkout process. The application has been built using React and utilizes features like routing, state management, and responsive design.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Home Page**: Displays a grid of products with details like name, price, and thumbnail. Users can filter products by name and sort them by price or rating.
+- **Product Details Page**: Displays detailed information for a selected product (name, price, description, images, ratings) and allows users to add the product to their cart or add to the wishlist.
+- **Shopping Cart Page**: Displays items in the cart with the option to update quantities, move to wishlist, remove items, and view the total price. A checkout button simulates the checkout process.
+- **Responsive Design**: The application is fully responsive.
 
-### `npm start`
+Optional Features:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Wishlist feature to save favorite products.
+- The product is either in the cart or on the wishlist.
+- Animations for page transitions using Framer Motion.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation & Setup
 
-### `npm test`
+1. Clone the repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   git clone https://github.com/ArpitGorasiya/e-commerce.git
+   ```
 
-### `npm run build`
+2. Navigate to the project directory:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   cd e-commerce
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+4. Start the development server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. The application should now be running at `http://localhost:3000`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Key Components:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **HomePage** (`/`): Displays the list of products and includes a search bar and filter options.
+- **ProductDetailsPage** (`/product/:id`): Shows detailed information about a product.
+- **CartPage** (`/cart`): Displays items in the shopping cart with options to update or remove them.
+- **WishlistPage** (`/wishlist`): Displays items in the wishlist with options to move it to wishlist.
 
-## Learn More
+## Technologies Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **React**: For building the UI and managing state.
+- **React Router**: For handling routing between pages.
+- **TailwindCSS**: For styling the application with utility-first CSS.
+- **React Context API**: For managing the global shopping cart state.
+- **Fake Store API**: For fetching mock product data.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Running Tests (Optional)
 
-### Code Splitting
+To run unit tests for components (if you've added them with React Testing Library or Jest), run the following command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm test
+```

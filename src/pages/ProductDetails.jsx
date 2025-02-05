@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { AiFillStar } from "react-icons/ai";
-import { CiHeart } from "react-icons/ci";
-import { BsFillCartPlusFill } from "react-icons/bs";
-import { FaArrowLeft } from "react-icons/fa";
 import axios from "axios";
 import { Spin } from "antd";
+import { CiHeart } from "react-icons/ci";
+import { useEffect, useState } from "react";
+import { AiFillStar } from "react-icons/ai";
+import { FaArrowLeft } from "react-icons/fa";
+import { BsFillCartPlusFill } from "react-icons/bs";
+import { useNavigate, useParams } from "react-router-dom";
 import { useCartWishlist } from "../context/CartContext";
 
 const ProductDetails = () => {
