@@ -29,7 +29,7 @@ const Wishlist = () => {
                   </h2>
                   <div className="mt-4 flex justify-between items-center">
                     <span className="text-xl font-bold text-gray-900">
-                      ₹{(product.price * 84).toFixed() || "N/A"}
+                      ₹{(product.price).toFixed() || "N/A"}
                     </span>
                   </div>
                   <div className="mt-4 space-y-2">
