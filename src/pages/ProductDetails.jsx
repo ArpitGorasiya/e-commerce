@@ -58,7 +58,7 @@ const ProductDetails = () => {
             <p className="mt-6 mb-6 text-gray-500">{product.description}</p>
             <div className="mt-4 sm:items-center sm:gap-4 sm:flex">
               <p className="text-2xl font-extrabold text-gray-900 sm:text-3xl">
-                ₹{(product.price * 84).toFixed()}
+                ₹{(product.price).toFixed()}
               </p>
 
               <div className="flex items-center gap-2 mt-2 sm:mt-0">
